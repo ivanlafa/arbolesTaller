@@ -4,7 +4,10 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<div>
+		<h4>Ivan Lafaurie,Sebastian de la rosa</h4>
+		<br>&copy Copyrigth
+		</div>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,7 +83,7 @@ session_start();
             </form>
         </section>
     </div>
-
+	
 
 </body>
 
@@ -92,13 +95,13 @@ session_start();
 		$raiz = new Nodo($_POST['nombreRaiz']);
 		$_SESSION['arbol'] = new Arbol($raiz);
 	} elseif (isset($_POST['BtnCrearArbol']) && empty($_POST['nombreRaiz'])) {
-		echo "alert('Digite un nombre para la raíz');";
+		echo "alert('Escriba un valor exacto de la raiz');";
 	}
 	if (isset($_POST['hojas']) && ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null)) {
-		echo "alert('Árbol vacío');";
+		echo "alert('Árbol vacio');";
 	}
 	if (isset($_POST['mostrar']) && ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null)) {
-		echo "alert('Árbol vacío');";
+		echo "alert('Árbol vacio');";
 	}
 	if (isset($_POST['BtnAgregarNodo']) && !empty($_POST['nombreHijo']) && !empty($_POST['nombrePapa']) && !empty($_POST['ubicacion'])) {
 		try {
@@ -110,7 +113,7 @@ session_start();
 
     //Agregar Nodo
 	} elseif (isset($_POST['BtnAgregarNodo']) && (empty($_POST['nombreHijo']) || empty($_POST['nombrePapa']) || empty($_POST['ubicacion']))) {
-		echo "alert('Por favor llene todos los campos');";
+		echo "alert('Complete todos los campos');";
 	}
 
     //Eliminar Nodo
@@ -122,7 +125,7 @@ session_start();
 			echo "alert('$error');";
 		}
 	} elseif (isset($_POST['BtnEliminarNodo']) && empty($_POST['nombreNodo'])) {
-		echo "alert('Digite el nombre del nodo a eliminar');";
+		echo "alert('Escriba el nombre del nodo que desea eliminar');";
 	}
 	?>
 
@@ -194,7 +197,7 @@ session_start();
 	<?php
 	if (isset($_POST['BtnContarNodos'])) {
 		if ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null) {
-			echo "alert('Árbol vacío');";
+			echo "alert('Árbol vacio');";
 		} else {
 			$cant = $_SESSION['arbol']->contarNodos($_SESSION['arbol']->getRaiz());
 			$msj = "Hay " . $cant . " nodos";
@@ -205,14 +208,14 @@ session_start();
     //Verificar si el arbol es completo
 	if (isset($_POST['BtnCompleto'])) {
 		if ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null) {
-			echo "alert('Árbol vacío')";
+			echo "alert('Árbol vacio')";
 		} else {
 			$res = $_SESSION['arbol']->arbolCompleto($_SESSION['arbol']->getRaiz());
 			$msj;
 			if ($res == 0) {
-				$msj = "El árbol es completo";
+				$msj = "El arbol esta lleno";
 			} else {
-				$msj = "Faltan " . $res . " nodos para ser completo";
+				$msj = "Faltan" . $res . " nodos para ser completado";
 			}
 			echo "alert('$msj');";
 		}
@@ -224,7 +227,7 @@ session_start();
 			echo "alert('Arbol vacio');";
 		} else {
 			$res = $_SESSION['arbol']->contarPares($_SESSION['arbol']->getRaiz());
-			$msj = "Hay " . $res . " nodos pares";
+			$msj = "Hay" . $res . " nodos pares";
 			echo "alert('$msj');";
 		}
 	}
@@ -232,7 +235,7 @@ session_start();
     //Recorrido Pos orden
 	if (isset($_POST['BtnPosOrden'])) {
 		if ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null) {
-			echo "alert('Árbol Vacio');";
+			echo "alert('Arbol Vacio');";
 		} else {
 			$rec = $_SESSION['arbol']->recorridoPosOrden($_SESSION['arbol']->getRaiz(), "");
 			echo "alert('$rec');";
@@ -253,7 +256,7 @@ session_start();
     //Recorrido Pre Orden
 	if (isset($_POST['BtnPreOrden'])) {
 		if ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null) {
-			echo "alert('Árbol Vacío');";
+			echo "alert('Arbol Vacio');";
 		} else {
 			$rec = $_SESSION['arbol']->recorridoPreOrden($_SESSION['arbol']->getRaiz(), "");
 			echo "alert('$rec');";
@@ -265,7 +268,7 @@ session_start();
 		if ($_SESSION['arbol'] == null || $_SESSION['arbol']->getRaiz() == null) {
 			echo "alert('Arbol Vacio')";
 		} else {
-			$res = "La altura del árbol es " . $_SESSION['arbol']->alturaArbol($_SESSION['arbol']->getRaiz(), 0);
+			$res = "La altura del árbol es :" . $_SESSION['arbol']->alturaArbol($_SESSION['arbol']->getRaiz(), 0);
 			echo "alert('$res');";
 		}
 	}

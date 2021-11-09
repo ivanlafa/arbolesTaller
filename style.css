@@ -28,6 +28,7 @@ p#barrita{
     margin-left: 75px;
 }
 img.logoinicio{
+    background-image: url(../arbolesTaller/img/logo.png);
     height: 70px;
     margin-left: 600px;
 }
