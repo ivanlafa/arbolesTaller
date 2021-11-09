@@ -27,7 +27,7 @@ session_start();
     <div class="contenedor">
         <header>
             <div class="logo-contenedor">
-                <img src="/arbolesTaller/img/logo.png" alt="logo.png" class="logoinicio" id="logoinicio">
+                <img src="/arbolesTaller/img/logo.jpg" alt="logo.png" class="logoinicio" id="logoinicio">
                 <p id="barrita">_____________________________________________________________________________________________________________________________</p>
             </div>
         </header>
