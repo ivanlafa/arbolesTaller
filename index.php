@@ -137,14 +137,14 @@ session_start();
 			$nodos = $_SESSION['arbol']->getNodos();
 			if (sizeof($hojas) == 0) {
 				foreach ($nodos as $key => $IdNodo) {
-					echo "{id: '$IdNodo', label: '$IdNodo', color: 'red'}, ";
+					echo "{id: '$IdNodo', label: '$IdNodo', color: '#00BFFF'}, ";
 				}
 			} else {
 				foreach ($nodos as $key => $IdNodo) {
 					if (in_array($IdNodo, $hojas)) {
-						echo "{id: '$IdNodo', label: '$IdNodo', color: '#FFC107'}, ";
+						echo "{id: '$IdNodo', label: '$IdNodo', color: '#00FF7F'}, ";
 					} else {
-						echo "{id: '$IdNodo', label: '$IdNodo', color: '#62C23B'}, ";
+						echo "{id: '$IdNodo', label: '$IdNodo', color: '#00BFFF'}, ";
 					}
 				}
 			}
