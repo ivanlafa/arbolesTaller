@@ -1,0 +1,236 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: cursive;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    padding: 5px 0;
+    background-color: white;
+}
+div.contenedor{
+    width: 1500px;
+    margin: 0 auto;   
+    border-top: none;
+    border-width: 2px;
+    padding-top: 10px;
+   
+}
+p#barrita{
+    margin-left: 75px;
+}
+img.logoinicio{
+    height: 70px;
+    margin-left: 600px;
+}
+div.contenido-principal::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+main{
+    width: 90%;
+    float: left;
+    padding-right: 40px;
+    background-color: white;
+}
+.contenido-principal{
+    width: 1500px;
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 43px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-top: none;
+    border-width: 2px;
+    
+
+}
+h4{
+    font-family: cursive;
+    text-decoration: underline;
+    color: rgb(43, 43, 43);
+}
+h4#txtPantalla{
+    float: right;
+    margin-right: 280px;
+    margin-top: 20px;
+    font-size: 19px;
+}
+.boton{
+    font-family: cursive;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+    
+    display: inline-block;
+    padding: 2px 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 150px;
+    height: 38.5px;
+    -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgba(116, 116, 116, 0.473);
+}
+.boton:hover {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgba(116, 116, 116, 0.473);
+    color: rgb(43, 43, 43);
+   
+}
+.controls{
+    width: 150px;
+    height: 38px;
+    padding: 10px ;
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 4px;
+    font-family: cursive;
+    font-size: 15px;
+}
+div.opciones{
+    padding-top: 1px;
+    width: 150px;
+    height: 60px;
+    border: 2px solid rgb(116, 116, 116);
+    position: absolute;
+    border-radius: 10px;
+    margin: -58px 0px 0px 165px;
+    padding-left: 30px;
+}
+
+div.pantallaArbol{
+    float: right;
+    width: 680px;
+    height: 700px;
+    border: 2px solid rgb(116, 116, 116);
+    margin-top: 60px;
+    margin-right: -368px;
+    border-radius: 4px;
+}
+.boton#BtnCrearArbol{
+    width: 135px;
+    height: 38.5px;
+    background-image: url(../arbolesTaller/img/1.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnAgregarNodo{
+    width: 150px;
+    height: 38.5px;
+    background-image: url(../arbolesTaller/img/2.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnEliminarNodo{
+    width: 168px;
+    height: 38.5px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/3.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnContarNodos{
+    width: 210px;
+    height: 38.5px;
+    padding-left: 43px;
+    margin-right: 131px;
+    background-image: url(../arbolesTaller/img/4.jpg);
+    background-position: 12px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnCompleto{
+    width: 222px;
+    height: 38.5px;
+    padding-left: 37px;
+    background-image: url(../arbolesTaller/img/6.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+    
+}
+.boton#BtnPares{
+    width: 218px;
+    height: 38.5px;
+    margin-right: 123px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/5.jpg);
+    background-position: 3px 11px ;
+    background-size: 25px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnPosOrden{
+    width: 217px;
+    height: 38.5px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/7.jpg);
+    background-position: 6px 5px ;
+    background-size: 17px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnNiveles{
+    width: 217px;
+    height: 38.5px;
+    margin-right: 123px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/7.jpg);
+    background-position: 6px 5px ;
+    background-size: 17px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnHojas{
+    width: 178px;
+    height: 38.5px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/8.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnPreOrden{
+    width: 217px;
+    height: 38.5px;
+    margin-right: 123px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/7.jpg);
+    background-position: 6px 5px ;
+    background-size: 17px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnAltura{
+    width: 178px;
+    height: 38.5px;
+   
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/9.jpg);
+    background-position: 4px 6px ;
+    background-size: 23px, 70px;
+    background-repeat: no-repeat;
+}
+.boton#BtnInOrden{
+    width: 217px;
+    height: 38.5px;
+    padding-left: 43px;
+    background-image: url(../arbolesTaller/img/7.jpg);
+    background-position: 6px 5px ;
+    background-size: 17px, 70px;
+    background-repeat: no-repeat;
+}
