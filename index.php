@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <div>
-		<h4>Ivan Lafaurie,Sebastian de la rosa</h4>
+		<h4>Ivan Lafaurie</h4>
 		<br>&copy Copyrigth
 		</div>
 <head>
